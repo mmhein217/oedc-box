@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <h2>Welcome to Audiobookshelf</h2>
+        </div>
+        
+        <!-- Login Form -->
+        <div id="login-form">
+            <form action="signup_login.php" method="POST">
+                <input type="hidden" name="action" value="login">
+                <input type="text" name="username" class="input-field" placeholder="Username" required>
+                <input type="password" name="password" class="input-field" placeholder="Password" required>
+                <button class="submit-btn" type="submit">Login</button>
+            </form>
+            <div class="switch-link" onclick="toggleForm('signup')">Don't have an account? Sign Up</div>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-form" style="display:none;">
+            <form action="signup_login.php" method="POST">
+                <input type="hidden" name="action" value="signup">
+                <input type="text" name="username" class="input-field" placeholder="Username" required>
+                <input type="password" name="password" class="input-field" placeholder="Password" required>
+                <input type="password" name="confirm-password" class="input-field" placeholder="Confirm Password" required>
+                <button class="submit-btn" type="submit">Sign Up</button>
+            </form>
+            <div class="switch-link" onclick="toggleForm('login')">Already have an account? Login</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formType) {
+            if (formType === 'signup') {
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('signup-form').style.display = 'block';
+            } else {
+                document.getElementById('signup-form').style.display = 'none';
+                document.getElementById('login-form').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

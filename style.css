@@ -1,0 +1,84 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #2c3e50, #bdc3c7); /* Gradient background */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.auth-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-header h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #feb47b;
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #feb47b;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 190, 123, 0.6);
+}
+
+.submit-btn {
+    width: 106%;
+    margin: 12px 0;
+    padding: 15px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+    transform: scale(1.05);
+}
+
+.switch-link {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #feb47b;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.switch-link:hover {
+    color: #ff7e5f;
+    text-decoration: underline;
+}
